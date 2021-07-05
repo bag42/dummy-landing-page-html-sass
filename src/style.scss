@@ -1,0 +1,338 @@
+@import "_reset.scss";
+@import "_variables.scss";
+@import "_mixins.scss";
+
+/*------------------------------------*\
+    $STYLES
+\*------------------------------------*/
+html {
+  // background-color: mix($white, $grey, 25%);
+  color: $dark;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  transition: transform 0.3s ease;
+  position: relative;
+}
+
+body.show-nav {
+  transform: translate(100%);
+  @media (min-width: 35em) {
+    transform: translate(250px);
+  }
+}
+
+nav {
+  background-color: $grey;
+  border-right: $size-tiny/4 solid $grey-border;
+  color: $white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 99;
+  transform: translateX(-100%);
+
+  .logo {
+    padding: $size-default * 2 0;
+    text-align: center;
+  }
+
+  .logo img {
+    width: 75px;
+    border-radius: 50%;
+  }
+
+  ul {
+    padding: 0;
+    list-style-type: none;
+    margin: 0;
+  }
+
+  ul li {
+    border-bottom: $size-tiny/4 solid $grey-border;
+    padding: $size-default;
+  }
+
+  ul li:first-of-type {
+    border-top: $size-tiny/4 solid $grey-border;
+  }
+
+  ul li a {
+    color: $dark;
+    text-decoration: none;
+  }
+
+  ul li a:hover {
+    text-decoration: underline;
+  }
+
+  .box {
+    @include flex-center;
+    svg {
+      width: 48px;
+      height: 48px;
+      color: $indigo;
+      stroke-width: 1px;
+    }
+  }
+
+  @media (min-width: 35em) {
+    width: 250px;
+  }
+}
+
+header {
+  background-color: $black;
+  background: url(https://images.unsplash.com/photo-1624821588855-a3ffb0b050ff?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1950&q=80)
+    no-repeat center center;
+  background-size: cover;
+  color: $white;
+  // font-size: 200%;
+  position: relative;
+  padding: $size-default * 2 $size-default;
+  text-align: center;
+
+  h1 {
+    margin: 0;
+    text-shadow: 2px 2px rgba(0, 0, 0, 0.3);
+  }
+
+  span {
+    display: block;
+  }
+
+  span.text-xl {
+    font-size: 3.75rem;
+    font-weight: 800;
+    line-height: 1;
+    text-shadow: 1px 1px rgba(0, 0, 0, 0.1);
+  }
+
+  span.color {
+    color: $indigo;
+  }
+
+  p {
+    margin: $size-default 0;
+  }
+}
+
+button,
+input[type="submit"] {
+  background-color: $grey;
+  border: 0;
+  border-radius: 5px;
+  color: $dark;
+  cursor: pointer;
+  padding: $size-default * 0.6 $size-default;
+}
+
+button:focus {
+  outline: none;
+}
+
+.toggle {
+  background-color: rgba(0, 0, 0, 0.3);
+  position: absolute;
+  top: $size-default;
+  left: $size-default;
+  z-index: 999;
+}
+
+.cta-btn {
+  background-color: $indigo;
+  color: $white;
+  padding: $size-default * 0.6 $size-default;
+  font-size: $size-default;
+  margin-right: $size-default;
+
+  &:hover {
+    background-color: $dark;
+    color: $white;
+    transition: 0.3s;
+  }
+}
+
+.gsa-btn {
+  background-color: $white;
+  color: $indigo;
+  padding: $size-default * 0.6 $size-default;
+  font-size: $size-default;
+  border: $size-tiny/4 solid $grey-border;
+
+  &:hover {
+    background-color: $dark;
+    color: $white;
+    transition: 0.3s;
+  }
+}
+
+.container {
+  padding: $size-default;
+  margin: 0 auto;
+  max-width: 100%;
+  // width: 800px;
+
+  section {
+    padding: 3rem 1rem;
+  }
+
+  section h2 {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: $size-tiny * 6;
+  }
+
+  section.color {
+    background-color: $indigo-lighten;
+  }
+
+  section div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: space-between;
+  }
+
+  section div span {
+    border: $size-tiny/4 solid $grey-border;
+    padding: 3rem;
+    text-align: center;
+  }
+
+  section div span svg {
+    color: $green;
+    width: 75px;
+    height: 75px;
+  }
+
+  section div span h2 {
+    color: $indigo;
+  }
+
+  .box {
+    @include flex-center;
+    svg {
+      width: 48px;
+      height: 48px;
+      color: $indigo;
+      stroke-width: 1px;
+    }
+    padding-bottom: $size-tiny;
+  }
+
+  @media (min-width: 35em) {
+    width: 50rem;
+    section div {
+      display: flex;
+      flex-direction: row;
+    }
+  }
+}
+
+.foa-btn {
+  background-color: $white;
+  color: $indigo;
+  padding: $size-default * 0.6 $size-default;
+  font-size: $size-default;
+  border: $size-tiny/4 solid $grey-border;
+  margin-top: $size-default;
+
+  &:hover {
+    background-color: $dark;
+    color: $white;
+    transition: 0.3s;
+  }
+}
+
+.modal-container {
+  background-color: rgba(0, 0, 0, 0.6);
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.modal-container.show-modal {
+  display: block;
+}
+
+.modal {
+  background-color: $white;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  position: absolute;
+  overflow: hidden;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 100%;
+  // width:$size-default*20;
+  width: 100%;
+  animation-name: modalopen;
+  animation-duration: $modal-duration;
+
+  @media (min-width: 35em) {
+    width: $size-default * 30;
+  }
+}
+
+.modal-header {
+  background-color: $grey;
+  color: $dark;
+  padding: $size-default;
+  border-bottom: $size-tiny/4 solid $grey-border;
+
+  h3 {
+    margin: 0;
+  }
+}
+
+.modal-content {
+  padding: $size-default;
+}
+
+.modal-form div {
+  margin: $size-default 0;
+}
+
+.modal-form label {
+  display: block;
+  margin-bottom: $size-tiny;
+}
+
+.modal-form .form-input {
+  padding: $size-tiny * 3;
+  width: 100%;
+}
+
+.close-btn {
+  background-color: transparent;
+  font-size: 25px;
+  position: absolute;
+  top: $size-tiny;
+  right: 0;
+}
+
+@keyframes modalopen {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

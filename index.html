@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>dummy css</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://unpkg.com/feather-icons"></script>
+  </head>
+  <body>
+    <!-- nav -->
+    <nav>
+      <div class="logo">
+        <!-- <img
+          class="logo mx-auto h-12 w-auto"
+          src="https://randomuser.me/api/portraits/men/77.jpg"
+          alt="user"
+        /> -->
+        <div class="box">
+            <i data-feather="box"></i>
+        </div>
+      </div>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Portfolio</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Contact me</a></li>
+      </ul>
+    </nav>
+
+    <!-- toggle -->
+    <button id="toggle" class="toggle">
+      <i data-feather="menu"></i>
+    </button>
+
+    <!-- header -->
+    <header>
+      <!-- <h1>Dummy Landing Page</h1> -->
+      <span class="block text-xl">Enrich Your</span>
+      <span class="color text-xl">Online Business</span>
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis, unde.
+      </p>
+      <button class="cta-btn" id="open">Sign Up</button>
+      <button class="gsa-btn" id="gsa">Getting Started</button>
+    </header>
+
+    <!-- container -->
+    <div class="container">
+ 
+        
+      <section>
+        <div class="box">
+            <i data-feather="box"></i>
+        </div>
+        <h2>What is this landing page about</h2>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius
+          laboriosam doloribus odit consequatur quod ipsa nihil soluta quia
+          animi non voluptatem, deserunt deleniti nam veniam facere aspernatur
+          tenetur molestias perspiciatis libero eveniet sapiente!
+        </p>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione
+          dolor expedita reiciendis magni libero repellendus, cupiditate
+          suscipit qui quaerat a velit asperiores facilis!
+        </p>
+      </section>
+
+      <section class="color">
+        <div class="box">
+            <i data-feather="box"></i>
+        </div>
+        <h2>Tell Me More</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis,
+          hic ex voluptas nisi iure dicta ab. Est consectetur, eligendi
+          assumenda quas ipsa ipsum possimus. Repudiandae quam dolorum
+          reiciendis placeat molestiae nulla, fugit quae corrupti eos doloribus
+          itaque iure qui! Id, ipsum ab?
+        </p>
+        <button class="foa-btn" id="gsa">Getting Started</button>
+      </section>
+
+      <section>
+        <div class="box">
+            <i data-feather="box"></i>
+        </div>
+        <h2>Benefits</h2>
+        <div>
+          <span>
+            <i data-feather="check" class="color"></i>
+            <h2>Lifetime Access</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia!
+            </p>
+          </span>
+          <span>
+            <i data-feather="check" class="color"></i>
+            <h2>30 Day Money Back</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia!
+            </p>
+          </span>
+          <span>
+            <i data-feather="check" class="color"></i>
+            <h2>Tailored Customer Support</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia!
+            </p>
+          </span>
+        </div>
+      </section>
+    </div>
+
+    <!-- modal log in -->
+    <div class="modal-container" id="modal">
+      <div class="modal">
+        <button class="close-btn" id="close">
+          <i data-feather="x"></i>
+        </button>
+        <div class="modal-header">
+          <h3>Sign Up</h3>
+        </div>
+        <div class="modal-content">
+          <p>Register with us to get offers, support and more</p>
+          <form class="modal-form">
+            <div>
+              <label for="name">Name</label>
+              <input
+                class="form-input"
+                type="text"
+                id="name"
+                placeholder="Enter Name"
+              />
+            </div>
+            <div>
+              <label for="email">Email</label>
+              <input
+                class="form-input"
+                type="email"
+                id="email"
+                placeholder="Enter Email"
+              />
+            </div>
+            <div>
+              <label for="password">Password</label>
+              <input
+                class="form-input"
+                type="password"
+                id="password"
+                placeholder="Enter Password"
+              />
+            </div>
+            <div>
+              <label for="cpassword">Confirm Password</label>
+              <input
+                class="form-input"
+                type="password"
+                id="cpassword"
+                placeholder="Confirm Password"
+              />
+            </div>
+            <input type="submit" value="Submit" class="submit-btn" />
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      feather.replace();
+    </script>
+    <script src="script.js"></script>
+  </body>
+</html>

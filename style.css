@@ -1,0 +1,365 @@
+/*------------------------------------*\
+    $RESET
+\*------------------------------------*/
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6,
+p, blockquote, pre,
+dl, dd, ol, ul,
+form, fieldset, legend,
+table, th, td, caption,
+hr {
+  margin: 0;
+  padding: 0;
+}
+
+abbr[title], dfn[title] {
+  cursor: help;
+}
+
+u, ins {
+  text-decoration: none;
+}
+
+ins {
+  border-bottom: 1px solid;
+}
+
+img {
+  font-style: italic;
+}
+
+label,
+input,
+textarea,
+button,
+select,
+option {
+  cursor: pointer;
+}
+
+.text-input:active,
+.text-input:focus,
+textarea:active,
+textarea:focus {
+  cursor: text;
+  outline: none;
+}
+
+/*------------------------------------*\
+    $STYLES
+\*------------------------------------*/
+html {
+  color: #4E4B5C;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  transition: transform 0.3s ease;
+  position: relative;
+}
+
+body.show-nav {
+  transform: translate(100%);
+}
+@media (min-width: 35em) {
+  body.show-nav {
+    transform: translate(250px);
+  }
+}
+
+nav {
+  background-color: #EFF1ED;
+  border-right: 0.05rem solid #d6dbd0;
+  color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 99;
+  transform: translateX(-100%);
+}
+nav .logo {
+  padding: 2rem 0;
+  text-align: center;
+}
+nav .logo img {
+  width: 75px;
+  border-radius: 50%;
+}
+nav ul {
+  padding: 0;
+  list-style-type: none;
+  margin: 0;
+}
+nav ul li {
+  border-bottom: 0.05rem solid #d6dbd0;
+  padding: 1rem;
+}
+nav ul li:first-of-type {
+  border-top: 0.05rem solid #d6dbd0;
+}
+nav ul li a {
+  color: #4E4B5C;
+  text-decoration: none;
+}
+nav ul li a:hover {
+  text-decoration: underline;
+}
+nav .box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+nav .box svg {
+  width: 48px;
+  height: 48px;
+  color: #4f46e5;
+  stroke-width: 1px;
+}
+@media (min-width: 35em) {
+  nav {
+    width: 250px;
+  }
+}
+
+header {
+  background-color: #000;
+  background: url(https://images.unsplash.com/photo-1624821588855-a3ffb0b050ff?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1950&q=80) no-repeat center center;
+  background-size: cover;
+  color: #fff;
+  position: relative;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+header h1 {
+  margin: 0;
+  text-shadow: 2px 2px rgba(0, 0, 0, 0.3);
+}
+header span {
+  display: block;
+}
+header span.text-xl {
+  font-size: 3.75rem;
+  font-weight: 800;
+  line-height: 1;
+  text-shadow: 1px 1px rgba(0, 0, 0, 0.1);
+}
+header span.color {
+  color: #4f46e5;
+}
+header p {
+  margin: 1rem 0;
+}
+
+button,
+input[type=submit] {
+  background-color: #EFF1ED;
+  border: 0;
+  border-radius: 5px;
+  color: #4E4B5C;
+  cursor: pointer;
+  padding: 0.6rem 1rem;
+}
+
+button:focus {
+  outline: none;
+}
+
+.toggle {
+  background-color: rgba(0, 0, 0, 0.3);
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  z-index: 999;
+}
+
+.cta-btn {
+  background-color: #4f46e5;
+  color: #fff;
+  padding: 0.6rem 1rem;
+  font-size: 1rem;
+  margin-right: 1rem;
+}
+.cta-btn:hover {
+  background-color: #4E4B5C;
+  color: #fff;
+  transition: 0.3s;
+}
+
+.gsa-btn {
+  background-color: #fff;
+  color: #4f46e5;
+  padding: 0.6rem 1rem;
+  font-size: 1rem;
+  border: 0.05rem solid #d6dbd0;
+}
+.gsa-btn:hover {
+  background-color: #4E4B5C;
+  color: #fff;
+  transition: 0.3s;
+}
+
+.container {
+  padding: 1rem;
+  margin: 0 auto;
+  max-width: 100%;
+}
+.container section {
+  padding: 3rem 1rem;
+}
+.container section h2 {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 1.2rem;
+}
+.container section.color {
+  background-color: #a49ff2;
+}
+.container section div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: space-between;
+}
+.container section div span {
+  border: 0.05rem solid #d6dbd0;
+  padding: 3rem;
+  text-align: center;
+}
+.container section div span svg {
+  color: #86efac;
+  width: 75px;
+  height: 75px;
+}
+.container section div span h2 {
+  color: #4f46e5;
+}
+.container .box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 0.2rem;
+}
+.container .box svg {
+  width: 48px;
+  height: 48px;
+  color: #4f46e5;
+  stroke-width: 1px;
+}
+@media (min-width: 35em) {
+  .container {
+    width: 50rem;
+  }
+  .container section div {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+.foa-btn {
+  background-color: #fff;
+  color: #4f46e5;
+  padding: 0.6rem 1rem;
+  font-size: 1rem;
+  border: 0.05rem solid #d6dbd0;
+  margin-top: 1rem;
+}
+.foa-btn:hover {
+  background-color: #4E4B5C;
+  color: #fff;
+  transition: 0.3s;
+}
+
+.modal-container {
+  background-color: rgba(0, 0, 0, 0.6);
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.modal-container.show-modal {
+  display: block;
+}
+
+.modal {
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  position: absolute;
+  overflow: hidden;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 100%;
+  width: 100%;
+  animation-name: modalopen;
+  animation-duration: 0.3s;
+}
+@media (min-width: 35em) {
+  .modal {
+    width: 30rem;
+  }
+}
+
+.modal-header {
+  background-color: #EFF1ED;
+  color: #4E4B5C;
+  padding: 1rem;
+  border-bottom: 0.05rem solid #d6dbd0;
+}
+.modal-header h3 {
+  margin: 0;
+}
+
+.modal-content {
+  padding: 1rem;
+}
+
+.modal-form div {
+  margin: 1rem 0;
+}
+
+.modal-form label {
+  display: block;
+  margin-bottom: 0.2rem;
+}
+
+.modal-form .form-input {
+  padding: 0.6rem;
+  width: 100%;
+}
+
+.close-btn {
+  background-color: transparent;
+  font-size: 25px;
+  position: absolute;
+  top: 0.2rem;
+  right: 0;
+}
+
+@keyframes modalopen {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
